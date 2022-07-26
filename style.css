@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* welcome box */
+.welcome{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    transform: translate(-50%,-50%);
+    background-color: whitesmoke;
+    border-radius: 12px;
+    width:40%;
+    height: max-content;
+    padding: 25px 25px 25px;
+    font-family: 'Poppins', sans-serif;
+}
+.welcome h1{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.3rem;
+}
+.welcome span{
+    font-family: 'archivo', sans-serif;
+    font-weight: 550;
+}
+.btn-W{
+    margin-top: 20px;
+    width: 35%;
+    font-size: 0.9rem;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+    background-color: aquamarine;
+    padding: 8px 2px;
+    border-radius: 12px;
+    transition: all 0.1s ease-in;
+}
+.welcome-item{
+    margin: 6px 0px;
+}
+.btn-W:hover{
+    transform: scale(0.9);
+}
+@media (max-width:415px)
+{
+    .welcome .btn-W
+    {
+        width:100%
+    }
+   
+}
+
+
+.box, .play-board{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.box{
+    /* display: none; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: aliceblue;
+    width: 35%;
+    height: 35%;
+    padding: 25px 25px 25px;
+    align-items: center;
+    border-radius: 12px;
+    /* display: none; */
+    transition: all 0.3s ease-in;
+}
+.hide{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%) scale(0.9);
+}
+.title{
+    font-weight: 400;
+}
+.option{
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.8s ease-in-out;
+}
+.option .btn:hover{
+    transform: scale(1.1);
+}
+.btn{
+    width: 25%;
+    margin: 3px 13px;
+    background-color: aquamarine;
+    padding: 8px 2px;
+    border-radius: 12px;
+    
+    }
+.box-items{
+    padding: 20px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    font-size: 23px;
+    font-weight: 600;
+    border-bottom: 2px solid grey;
+    width: 100%;
+}
+body{
+    background-color: rgb(43, 190, 171);
+}
+
+
+/* play board section */
+.play-board{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    transform: translate(-50%,-50%) scale(0.9);
+}
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1.1);
+}
+.details{
+    background-color: white;
+    padding: 6px;
+    border-radius: 7px;
+}
+.play-board .player{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.play-board .details span{
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px 0;
+    position: relative;
+    z-index: 4;
+}
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(43, 190, 171);
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s ;
+
+}
+.slider.active{
+     left:50%;
+
+}
+
+.play-board section{
+    
+    display: flex;
+}
+.play-board section span{
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 600;
+    color: rgb(43, 190, 171);
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 2px;
+    background-color: white;
+    border: 0.9px solid black;
+}
+.play-area{
+    margin-top: 20px;
+}
+
+/* result section */
+.result-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 12px;
+}
+.result-box.show{
+
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%,-50%) scale(1.1);
+}
+.result-box{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    transform: translate(-50%,-50%) scale(0.9);
+}
+.result-box .won-text{
+    display: flex;
+    font-size: 23px;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.result-box .won-text{
+    font-weight: 600;
+    display: inline-block;
+}
+.result-box .btn-replay{
+    margin-top: 20px;
+    width: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+    background-color: aquamarine;
+    padding: 8px 2px;
+    border-radius: 12px;
+    transition: all 0.1s ease-in;
+}
+.result-box .btn-replay:hover{
+    transform: scale(1.1);
+}
